@@ -333,11 +333,11 @@ importers:
         version: 7.7.1
     devDependencies:
       happy-dom:
-        specifier: 17.4.4
-        version: 17.4.4
+        specifier: 20.0.2
+        version: 20.0.2
       vitest:
         specifier: 3.1.1
-        version: 3.1.1(@types/node@22.13.17)(happy-dom@17.4.4)(jsdom@25.0.1)(msw@2.7.3(@types/node@22.13.17)(typescript@5.8.2))(terser@5.39.0)(yaml@2.7.1)
+        version: 3.1.1(@types/node@22.13.17)(happy-dom@20.0.2)(jsdom@25.0.1)(msw@2.7.3(@types/node@22.13.17)(typescript@5.8.2))(terser@5.39.0)(yaml@2.7.1)
 
 packages:
 
@@ -1842,6 +1842,7 @@ packages:
 
   '@mswjs/data@0.16.2':
     resolution: {integrity: sha512-/C0d/PBcJyQJokUhcjO4HiZPc67hzllKlRtD1XELygl2t991/ATAAQJVcStn4YtVALsNodruzOHT0JIvgr0hnA==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   '@mswjs/interceptors@0.37.6':
     resolution: {integrity: sha512-wK+5pLK5XFmgtH3aQ2YVvA3HohS3xqV/OxuVOdNx9Wpnz7VE/fnC+e1A7ln6LFYeck7gOJ/dsZV6OLplOtAJ2w==}
@@ -2425,6 +2426,9 @@ packages:
   '@types/minimatch@5.1.2':
     resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==}
 
+  '@types/node@20.19.21':
+    resolution: {integrity: sha512-CsGG2P3I5y48RPMfprQGfy4JPRZ6csfC3ltBZSRItG3ngggmNY/qs2uZKp4p9VbrpqNNSMzUZNFZKzgOGnd/VA==}
+
   '@types/node@22.13.17':
     resolution: {integrity: sha512-nAJuQXoyPj04uLgu+obZcSmsfOenUg6DxPKogeUy6yNCFwWaj5sBF8/G/pNo8EtBJjAfSVgfIlugR/BCOleO+g==}
 
@@ -2481,6 +2485,9 @@ packages:
 
   '@types/uuid@8.3.4':
     resolution: {integrity: sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw==}
+
+  '@types/whatwg-mimetype@3.0.2':
+    resolution: {integrity: sha512-c2AKvDT8ToxLIOUlN51gTiHXflsfIFisS4pO7pDPoKouJCESkhZnEy623gwP9laCy5lnLDAw1vAzu2vM2YLOrA==}
 
   '@types/yargs-parser@21.0.3':
     resolution: {integrity: sha512-I4q9QU9MQv4oEOz4tAHJtNz1cwuLxn2F3xcc2iV5WdqLPpUnj30aUuxt1mAxYTG+oe8CZMV/+6rU4S4gRDzqtQ==}
@@ -5390,9 +5397,9 @@ packages:
     engines: {node: '>=0.4.7'}
     hasBin: true
 
-  happy-dom@17.4.4:
-    resolution: {integrity: sha512-/Pb0ctk3HTZ5xEL3BZ0hK1AqDSAUuRQitOmROPHhfUYEWpmTImwfD8vFDGADmMAX0JYgbcgxWoLFKtsWhcpuVA==}
-    engines: {node: '>=18.0.0'}
+  happy-dom@20.0.2:
+    resolution: {integrity: sha512-pYOyu624+6HDbY+qkjILpQGnpvZOusItCk+rvF5/V+6NkcgTKnbOldpIy22tBnxoaLtlM9nXgoqAcW29/B7CIw==}
+    engines: {node: '>=20.0.0'}
 
   has-ansi@3.0.0:
     resolution: {integrity: sha512-5JRDTvNq6mVkaMHQVXrGnaCXHD6JfqxwCy8LA/DQSqLLqePR9uaJVm2u3Ek/UziJFQz+d1ul99RtfIhE2aorkQ==}
@@ -8311,6 +8318,9 @@ packages:
 
   undici-types@6.20.0:
     resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
+
+  undici-types@6.21.0:
+    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
   unicode-canonical-property-names-ecmascript@2.0.1:
     resolution: {integrity: sha512-dA8WbNeb2a6oQzAQ55YlT5vQAWGV9WXOsi3SskE3bcCdM0P4SDd+24zS/OCacdRq5BkdsRj9q3Pg6YyQoxIGqg==}
@@ -11554,6 +11564,10 @@ snapshots:
 
   '@types/minimatch@5.1.2': {}
 
+  '@types/node@20.19.21':
+    dependencies:
+      undici-types: 6.21.0
+
   '@types/node@22.13.17':
     dependencies:
       undici-types: 6.20.0
@@ -11604,6 +11618,8 @@ snapshots:
     optional: true
 
   '@types/uuid@8.3.4': {}
+
+  '@types/whatwg-mimetype@3.0.2': {}
 
   '@types/yargs-parser@21.0.3': {}
 
@@ -15660,9 +15676,10 @@ snapshots:
     optionalDependencies:
       uglify-js: 3.19.3
 
-  happy-dom@17.4.4:
+  happy-dom@20.0.2:
     dependencies:
-      webidl-conversions: 7.0.0
+      '@types/node': 20.19.21
+      '@types/whatwg-mimetype': 3.0.2
       whatwg-mimetype: 3.0.0
 
   has-ansi@3.0.0:
@@ -19007,6 +19024,8 @@ snapshots:
 
   undici-types@6.20.0: {}
 
+  undici-types@6.21.0: {}
+
   unicode-canonical-property-names-ecmascript@2.0.1: {}
 
   unicode-match-property-ecmascript@2.0.0:
@@ -19134,7 +19153,7 @@ snapshots:
       terser: 5.39.0
       yaml: 2.7.1
 
-  vitest@3.1.1(@types/node@22.13.17)(happy-dom@17.4.4)(jsdom@25.0.1)(msw@2.7.3(@types/node@22.13.17)(typescript@5.8.2))(terser@5.39.0)(yaml@2.7.1):
+  vitest@3.1.1(@types/node@22.13.17)(happy-dom@20.0.2)(jsdom@25.0.1)(msw@2.7.3(@types/node@22.13.17)(typescript@5.8.2))(terser@5.39.0)(yaml@2.7.1):
     dependencies:
       '@vitest/expect': 3.1.1
       '@vitest/mocker': 3.1.1(msw@2.7.3(@types/node@22.13.17)(typescript@5.8.2))(vite@6.2.4(@types/node@22.13.17)(terser@5.39.0)(yaml@2.7.1))
@@ -19158,7 +19177,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 22.13.17
-      happy-dom: 17.4.4
+      happy-dom: 20.0.2
       jsdom: 25.0.1(supports-color@8.1.1)
     transitivePeerDependencies:
       - jiti
